@@ -1,0 +1,134 @@
+@import '~@angular/material/theming';
+
+$primary-color: (
+  50: var(--primary-color),
+  100: var(--primary-color),
+  200: var(--primary-color),
+  300: var(--primary-color),
+  400: var(--primary-color),
+  500: var(--primary-color),
+  600: var(--primary-color),
+  700: var(--primary-color),
+  800: var(--primary-color),
+  900: var(--primary-color),
+  A100: var(--primary-color),
+  A200: var(--primary-color),
+  A400: var(--primary-color),
+  A700: var(--primary-color),
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: var(--font-button-color),
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$cyan-color: (
+  50: var(--cyan-color),
+  100: var(--cyan-color),
+  200: var(--cyan-color),
+  300: var(--cyan-color),
+  400: var(--cyan-color),
+  500: var(--cyan-color),
+  600: var(--cyan-color),
+  700: var(--cyan-color),
+  800: var(--cyan-color),
+  900: var(--cyan-color),
+  A100: var(--cyan-color),
+  A200: var(--cyan-color),
+  A400: var(--cyan-color),
+  A700: var(--cyan-color),
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: var(--font-button-color),
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$warn-color: (
+  50: var(--warn-color),
+  100: var(--warn-color),
+  200: var(--warn-color),
+  300: var(--warn-color),
+  400: var(--warn-color),
+  500: var(--warn-color),
+  600: var(--warn-color),
+  700: var(--warn-color),
+  800: var(--warn-color),
+  900: var(--warn-color),
+  A100: var(--warn-color),
+  A200: var(--warn-color),
+  A400: var(--warn-color),
+  A700: var(--warn-color),
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: var(--font-button-color),
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+///////////// SIDEBAR /////////////
+$sidebar-background-color1: var(--sidebar-background-color1);
+$sidebar-background-color2: var(--sidebar-background-color2);
+$sidebar-font-color: var(--sidebar-font-color);
+$sidebar-font-color-active: var(--sidebar-font-color-active);
+$sidebar-color-active: var(--sidebar-color-active);
+$sidebar-color-user-info: var(--sidebar-color-user-info);
+$mat-drawer-bg: linear-gradient($sidebar-background-color1, $sidebar-background-color2);
+
+///////////// NAVBAR /////////////
+$navbar-color: var(--navbar-color);
+$navbar-color-icon: var(--navbar-color-icon);
+$navbar-color-font: var(--navbar-color-font);
+
+///////////// FOOTER /////////////
+$footer-bg: var(--footer-color);
+
+///////////// BACKGROUND /////////////
+$content-bg: var(--bg-color);
+
+///////////// HEADER ERRO /////////////
+$error-header-color: var(--error-header-color);
+
+///////////// MENU /////////////
+$navbar-color-menu-button: var(--navbar-color-menu-button);
+
+$primary: mat-palette($primary-color, 500);
+$accent: mat-palette($cyan-color, 500);
+$warn: mat-palette($warn-color, 500);
+
+$custom-theme: mat-light-theme($primary, $accent, $warn);
+
+@include angular-material-theme($custom-theme);

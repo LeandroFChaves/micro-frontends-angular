@@ -1,0 +1,32 @@
+@each $color, $value in $theme-colors {
+  .mat-button-base {
+    &.mat-button--#{$color}-shadow {
+      box-shadow: 0 0 10px 5px rgba($value, 0.35);
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .mat-flat-button,
+  .mat-raised-button,
+  .mat-mini-fab,
+  .mat-fab {
+    &.mat-#{$color} {
+      background-color: $value;
+      color: $white;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .mat-button,
+  .mat-stroked-button,
+  .mat-icon-button {
+    &.mat-#{$color} {
+      color: $value;
+      .mat-button-focus-overlay {
+        background-color: $value;
+      }
+    }
+  }
+}

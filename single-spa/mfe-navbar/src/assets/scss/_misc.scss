@@ -1,0 +1,19 @@
+.content-wrapper {
+  background-color: $content-bg;
+  min-height: 100vh;
+  padding: $content-wrapper-padding;
+  @media (max-width: 767px) {
+    padding: 16px;
+  }
+}
+.mat-toolbar {
+  background: $navbar-color !important;
+  font-size: inherit;
+  &.mat-toolbar-single-row {
+    height: 78px;
+    padding: 0 32px;
+  }
+  app-navbar {
+    width: 100%;
+  }
+}

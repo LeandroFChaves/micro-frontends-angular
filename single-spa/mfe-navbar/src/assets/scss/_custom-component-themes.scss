@@ -1,0 +1,5 @@
+@import './../../assets/scss/components/notifications';
+
+@mixin custom-components-theme($theme, $notifications-theme) {
+  @include notification-theme($notifications-theme);
+}

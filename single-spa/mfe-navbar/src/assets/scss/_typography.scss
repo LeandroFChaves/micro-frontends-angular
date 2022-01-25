@@ -1,0 +1,46 @@
+body {
+  font-size: mat-font-size($app-typography, body-2);
+  font-family: $type1;
+  font-weight: initial;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+}
+p {
+  font-size: $default-font-size;
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+  line-height: 1.5rem;
+}
+h1 {
+  font-size: 2.19rem;
+}
+
+h2 {
+  font-size: 1.625rem;
+}
+
+h3 {
+  font-size: 1.4375rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}

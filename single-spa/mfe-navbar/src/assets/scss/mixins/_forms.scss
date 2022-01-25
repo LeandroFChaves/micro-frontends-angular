@@ -1,0 +1,9 @@
+@each $color, $value in $theme-colors {
+  .mat-#{$color} {
+    .mat-slider-track-fill,
+    .mat-slider-thumb,
+    .mat-slider-thumb-label {
+      background-color: $value;
+    }
+  }
+}

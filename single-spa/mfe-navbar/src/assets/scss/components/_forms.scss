@@ -1,0 +1,32 @@
+.mat-form-field {
+  width: 100%;
+  &.mat-form-field-appearance-legacy,
+  &.mat-form-field-appearance-standard {
+    .mat-form-field-underline {
+      background-color: #cbceda;
+    }
+  }
+}
+
+.mat-radio-button {
+  margin-right: 20px;
+}
+
+.mat-checkbox {
+  margin-right: 25px;
+}
+
+.mat-slide-toggle {
+  margin-top: 15px;
+  margin-right: 60px;
+}
+
+::ng-deep .mat-option {
+  font-size: 14px;
+}
+
+::ng-deep .mat-form-field-appearance-fill {
+  .mat-form-field-underline::before {
+    background-color: #cbceda;
+  }
+}

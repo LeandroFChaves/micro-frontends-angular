@@ -1,0 +1,30 @@
+:root {
+  /* Cores gerais */
+  --primary-color: rgb(0, 46, 137);
+  --cyan-color: rgb(49, 167, 223);
+  --warn-color: rgb(100, 43, 107);
+  --font-button-color: #ffffff;
+
+  /* Cores do menu lateral (sidebar) */
+  --sidebar-background-color1: rgb(0, 46, 137);
+  --sidebar-background-color2: rgb(40, 23, 51);
+  --sidebar-font-color: #ffffff;
+  --sidebar-font-color-active: #000000;
+  --sidebar-color-active: #ffffff;
+  --sidebar-color-user-info: #ffffff;
+
+  /* Cor do cabecalho (navbar) */
+  --navbar-color: #e9eaef;
+  --navbar-color-icon: #000000;
+  --navbar-color-font: #000000;
+  --navbar-color-menu-button: #000000;
+
+  /* Cor de fundo da caixa de msg de erro (header) */
+  --error-header-color: rgb(0, 46, 137);
+
+  /* Cor de fundo da pagina */
+  --bg-color: #e9eaef;
+
+  /* Cor do rodape (footer) */
+  --footer-color: #e9eaef;
+}

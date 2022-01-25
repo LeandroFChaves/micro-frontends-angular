@@ -1,0 +1,24 @@
+.mat-progress-bar.mat-accent {
+  background-color: #00bcd4;
+}
+
+@each $color, $value in $theme-colors {
+  .mat-progress-bar {
+    &.mat-#{$color} {
+      background-color: $value;
+      .mat-progress-bar-fill {
+        &:after {
+          background-color: $value;
+        }
+      }
+    }
+  }
+  .mat-progress-spinner,
+  .mat-spnner {
+    &.mat-#{$color} {
+      circle {
+        stroke: $value;
+      }
+    }
+  }
+}

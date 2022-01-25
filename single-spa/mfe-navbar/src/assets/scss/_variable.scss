@@ -1,0 +1,283 @@
+// Temas personalizados para Angular Material
+// Para mais informações: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+
+// Inclui os estilos comuns para o angular material. Incluímos isso aqui para que você
+// carregue um único arquivo css para Angular Material em seu aplicativo.
+// Certifique-se de incluir este mixin apenas uma vez!
+@include mat-core();
+
+// Tema das notificações do sistema / snackbar
+$notifications-theme: (
+  default: #fff,
+  info: mat-color(mat-palette($mat-blue), 400),
+  success: mat-color(mat-palette($mat-green), 400),
+  warning: mat-color(mat-palette($mat-yellow), 400),
+  error: mat-color(mat-palette($mat-red), 400),
+);
+
+////////// MATERIAL THEME COLORS //////////
+// Defina as paletas para o seu tema usando as paletas do Material Design.
+// Para cada paleta, você pode opcionalmente especificar um padrão, mais claro e mais escuro.
+// Paletas de cores disponíveis em: https://material.io/design/color/ ou para gerar de forma
+// customizada a sua paleta utilize o site: http://mcg.mbitson.com/
+$primary-color: (
+  50: #e8f0f7,
+  100: #c6d8ec,
+  200: #a0bfe0,
+  300: #7aa5d3,
+  400: #5e91c9,
+  500: #417ec0,
+  600: #3b76ba,
+  700: #326bb2,
+  800: #2a61aa,
+  900: #1c4e9c,
+  A100: #d4e4ff,
+  A200: #a1c3ff,
+  A400: #6ea2ff,
+  A700: #5592ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$cyan-color: (
+  50: #e9f8f9,
+  100: #c8edf1,
+  200: #a3e1e8,
+  300: #7ed5de,
+  400: #63ccd7,
+  500: #47c3d0,
+  600: #40bdcb,
+  700: #37b5c4,
+  800: #2faebe,
+  900: #20a1b3,
+  A100: #ecfdff,
+  A200: #b9f6ff,
+  A400: #86efff,
+  A700: #6decff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$warn-color: (
+  50: #fce9e9,
+  100: #f7c7c7,
+  200: #f2a2a2,
+  300: #ec7d7d,
+  400: #e86161,
+  500: #e44545,
+  600: #e13e3e,
+  700: #dd3636,
+  800: #d92e2e,
+  900: #d11f1f,
+  A100: #ffffff,
+  A200: #ffd5d5,
+  A400: #ffa2a2,
+  A700: #ff8989,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$primary: mat-palette($primary-color, 500);
+$accent: mat-palette($cyan-color, 500);
+$warn: mat-palette($warn-color, 500);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+
+// Criando o objeto do tema.
+$theme: mat-light-theme($primary, $accent, $warn);
+
+// Inclui estilos de tema para o núcleo de cada componente usado em seu aplicativo.
+// Alternativamente, você pode importar e @include os mixins de tema para cada componente
+// que você está usando.
+@include angular-material-theme($theme);
+@include custom-components-theme($theme, $notifications-theme);
+
+////////// TYPOGRAPHY CUSTOMIZATION //////////
+
+$app-typography: mat-typography-config(
+  $font-family: 'Roboto, sans-serif',
+  $display-4: mat-typography-level(72px, 72px, 400, $letter-spacing: -0.05em),
+  $display-3: mat-typography-level(56px, 56px, 400, $letter-spacing: -0.02em),
+  $display-2: mat-typography-level(45px, 48px, 400, $letter-spacing: -0.005em),
+  $display-1: mat-typography-level(40px, 40px, 400),
+  $headline: mat-typography-level(35px, 32px, 400),
+  $title: mat-typography-level(26px, 32px, 500),
+  $subheading-2: mat-typography-level(23px, 28px, 500),
+  $subheading-1: mat-typography-level(20px, 24px, 500),
+  $body-2: mat-typography-level(16px, inherit, 400),
+  $body-1: mat-typography-level(14px, inherit, 400),
+  $caption: mat-typography-level(12px, 20px, 400),
+  $button: mat-typography-level(14px, 14px, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input: mat-typography-level(inherit, 1.125, 400),
+);
+
+@include mat-core($app-typography);
+
+////////// TYPOGRAPHY CUSTOMIZATION //////////
+
+////////// THEME COLORS //////////////
+
+$theme-colors: (
+  'primary': #417ec0,
+  'secondary': #27395d,
+  'info': #47c3d0,
+  'success': #00b67a,
+  'warning': #e9b439,
+  'danger': #e44545,
+  'light': #f0f1f1,
+  'dark': #3e4b5b,
+  'white': #ffffff,
+);
+
+////////// THEME COLORS //////////////
+
+////////// SOCIAL COLORS //////////
+
+$social-colors: (
+  twitter: #2caae1,
+  facebook: #3b579d,
+  google: #dc4a38,
+  linkedin: #0177b5,
+  pinterest: #cc2127,
+  youtube: #e52d27,
+  github: #333333,
+  behance: #1769ff,
+  dribbble: #ea4c89,
+  reddit: #ff4500,
+);
+
+////////// SOCIAL COLORS //////////
+
+////////// COLOR VARIABLES //////////
+$primary-azul: #417ec0;
+$primary-amarelo: #e9b439;
+$secondary-azul: #27395d;
+$secondary-tifany: #47c3d0;
+$content-bg: #e9eaef;
+$border-color: #e9eaef;
+$footer-bg: #e9eaef;
+$white: #fff;
+$black: #000;
+$red: #ec3432;
+$yellow: #feab00;
+$blue: #0057ff;
+$green: green;
+////////// COLOR VARIABLES //////////
+
+////////// COLOR VARIABLES //////////
+
+////////// FONTS  //////////
+$type1: mat-font-family($app-typography);
+
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$default-font-size: 0.875rem; // 14px as base font size
+
+$text-muted: #bababa;
+$body-color: #ffffff;
+$text-body: #000;
+
+////////// FONTS  //////////
+
+////////// SIDEBAR ////////
+$mat-drawer-width: 243px;
+$mat-drawer-bg: linear-gradient(#27395d, #417ec0);
+$mat-drawer-list-item-spacing: 7px;
+$mat-drawer-list-item-margin: $mat-drawer-list-item-spacing 16px $mat-drawer-list-item-spacing 27px;
+$mat-drawer-link-color: #fff;
+
+///////// NAVBAR /////////////
+$mat-toolbar-bg: $content-bg;
+
+$content-wrapper-padding: 6px 19px;
+
+///////////CARD.////////////
+$mat-card-bg: #ffffff;
+$mat-card-padding: 32px 28px;
+///////////CARD.////////////
+
+////////// TABLES //////////
+$table-head-font-size: 14px;
+$table-body-font-size: 14px;
+$table-padding: 14px 10px;
+$table-head-color: lighten(#000, 46%);
+$table-body-color: lighten(#000, 13%);
+$table-cell-spacing: 30px;
+$table-hover-color: #eeeeee;
+////////// TABLES //////////
+
+$mdi-font-path: '~@mdi/font/fonts';
+$flag-icon-css-path: '~flag-icon-css/flags/';
+$fa-font-path: '~font-awesome/fonts/';
+$dropdown-bg: #ffffff;
+$fill-background: red;
+
+$mdc-layout-grid-default-gutter: (
+  desktop: 24px,
+  tablet: 16px,
+  phone: 16px,
+);
+
+$mdc-layout-grid-default-margin: (
+  desktop: 13px,
+  tablet: 9px,
+  phone: 6px,
+);
+
+$mdc-layout-grid-breakpoints: (
+  wide-desktop: 1200px,
+  desktop: 992px,
+  tablet: 768px,
+  phone: 0px,
+);

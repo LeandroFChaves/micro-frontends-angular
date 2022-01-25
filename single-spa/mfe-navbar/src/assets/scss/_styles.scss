@@ -1,0 +1,75 @@
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  overflow-y: scroll;
+  background: #c9c9d2;
+  box-shadow: inset 0 0 4px #c9c9d2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $sidebar-background-color1;
+  border-radius: 3px;
+}
+/* Custom scrollbar */
+
+.div-salvar-cancelar {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.btn-salvar-cancelar {
+  width: 125px;
+  margin-right: 10px !important;
+}
+
+.div-novo {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.btn-novo {
+  width: 100px;
+}
+
+/** CSS de customização das tabelas **/
+
+.mat-row .mat-cell {
+  cursor: pointer;
+}
+
+.mat-row.highlighted {
+  background: lightblue;
+}
+
+.table-empty-msg {
+  color: rgb(250, 1, 1);
+  margin-top: 50px;
+}
+
+.sessao-detalhe {
+  padding-top: 50px;
+}
+
+.mdc-button {
+  min-width: 0;
+  padding: 10px;
+}
+
+.col_acoes {
+  text-align: right;
+  padding-right: 0 !important;
+}
+
+/** Fim do CSS de customização das tabelas **/
+
+.main-content {
+  position: fixed;
+  padding: 85px 265px;
+}
+
+.topnav {
+  position: fixed;
+  width: 100%;
+}

@@ -1,0 +1,7 @@
+.mat-button-base {
+  &.mat-raised-button,
+  &.mat-stroked-button,
+  &.mat-flat-buttons {
+    border-radius: 2px;
+  }
+}

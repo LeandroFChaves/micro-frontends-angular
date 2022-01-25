@@ -1,0 +1,58 @@
+// ngx-bar-rating
+
+.br {
+  @extend .m-0;
+  &.br-default,
+  &.br-fontawesome {
+    .br-units {
+      .br-unit {
+        margin-right: 0;
+        height: auto;
+        font-size: 1rem;
+        &::after {
+          color: rgba(theme-color(warning), 0.2);
+        }
+        &.br-active,
+        &.br-selected {
+          &::after {
+            color: theme-color(warning);
+          }
+        }
+      }
+    }
+  }
+  &.br-horizontal {
+    display: block;
+    .br-units {
+      .br-unit {
+        height: 26px;
+        background-color: rgba(theme-color(warning), 0.2);
+        &.br-active,
+        &.br-selected {
+          background-color: theme-color(warning);
+        }
+      }
+    }
+  }
+  &.br-vertical,
+  &.br-movie,
+  &.br-square {
+    display: block;
+    .br-units {
+      .br-unit {
+        background-color: rgba(theme-color(warning), 0.2);
+        border-color: rgba(theme-color(warning), 0.2);
+        color: $body-color;
+        &.br-active,
+        &.br-selected {
+          background-color: theme-color(warning);
+          border-color: theme-color(warning);
+          color: $white;
+        }
+      }
+    }
+    .br-text {
+      color: theme-color(warning);
+    }
+  }
+}

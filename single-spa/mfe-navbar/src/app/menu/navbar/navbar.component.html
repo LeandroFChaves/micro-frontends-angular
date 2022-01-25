@@ -1,0 +1,136 @@
+<div class="navbar-menu-wrapper">
+  <ul class="navbar-nav navbar-nav-right">
+    <div class="d-md-flex d-none align-items-center">
+      <img [src]="urlUsuario1" alt="user" class="user" />
+      <p class="user-name font-weight-normal mb-0">{{ usuario?.firstName }}</p>
+    </div>
+    <mat-divider [vertical]="true" class="d-md-block d-none"></mat-divider>
+    <li class="d-md-block d-none">
+      <button [matMenuTriggerFor]="profile" mat-icon-button class="m-r-5 color-icon">
+        <i class="mdi mdi-cog"></i>
+      </button>
+      <mat-menu #profile="matMenu" class="mymegamenu">
+        <mat-list>
+          <mat-list-item>
+            <div class="item-thumbnail item-thumbnail-icon-only">
+              <i class="mdi mdi-alert-circle-outline text-primary"></i>
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">Settings</h6>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="item-thumbnail item-thumbnail-icon-only">
+              <i class="mdi mdi-progress-download text-primary"></i>
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">Update</h6>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-menu>
+    </li>
+    <li>
+      <button [matMenuTriggerFor]="profile1" mat-icon-button class="m-r-5 color-icon">
+        <i class="mdi mdi-bell"></i>
+      </button>
+      <mat-menu #profile1="matMenu" class="mymegamenu">
+        <h6 class="title"><i class="mdi mdi-bell-outline mr-2 tx-16"></i> Notifications</h6>
+        <mat-list>
+          <mat-list-item>
+            <div class="item-thumbnail item-thumbnail-icon">
+              <i class="mdi mdi-email-outline"></i>
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">You received a new message</h6>
+              <p class="text-muted tx-12 mb-0">6 min ago</p>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="item-thumbnail item-thumbnail-icon">
+              <i class="mdi mdi-account-outline"></i>
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">New user registered</h6>
+              <p class="text-muted tx-12 mb-0">15 min ago</p>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="item-thumbnail item-thumbnail-icon">
+              <i class="mdi mdi-alert-circle-outline"></i>
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">System Alert</h6>
+              <p class="text-muted tx-12 mb-0">2 days ago</p>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-menu>
+    </li>
+    <li>
+      <button [matMenuTriggerFor]="profile2" mat-icon-button class="m-r-5 color-icon">
+        <i class="mdi mdi-email"></i>
+        <span class="count-indicator">
+          <span class="count">3</span>
+        </span>
+      </button>
+      <mat-menu #profile2="matMenu" class="mymegamenu">
+        <h6 class="title"><i class="mdi mdi-email-outline mr-2 tx-16"></i> Messages</h6>
+        <mat-list>
+          <mat-list-item>
+            <div class="item-thumbnail">
+              <img [src]="urlUsuario1" alt="user" />
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">Mark send you a message</h6>
+              <p class="text-muted tx-12 mb-0">1 Minutes ago</p>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="item-thumbnail">
+              <img [src]="urlUsuario2" alt="user" />
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">Cregh send you a message</h6>
+              <p class="text-muted tx-12 mb-0">15 Minutes ago</p>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="item-thumbnail">
+              <img src="assets/images/faces/usuario-3.jpg" alt="user" />
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">Profile picture updated</h6>
+              <p class="text-muted tx-12 mb-0">18 Minutes ago</p>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-menu>
+    </li>
+    <li class="d-md-block d-none">
+      <button [matMenuTriggerFor]="profile3" mat-icon-button class="m-r-5 color-icon">
+        <i class="mdi mdi-arrow-down-bold-box"></i>
+      </button>
+      <mat-menu #profile3="matMenu" class="mymegamenu">
+        <mat-list>
+          <mat-list-item>
+            <div class="item-thumbnail item-thumbnail-icon-only">
+              <i class="mdi mdi-lock-outline text-primary"></i>
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">Lock screen</h6>
+            </div>
+          </mat-list-item>
+          <mat-list-item>
+            <div class="item-thumbnail item-thumbnail-icon-only">
+              <i class="mdi mdi-logout-variant text-primary"></i>
+            </div>
+            <div class="item-content d-flex align-items-start flex-column justify-content-center">
+              <h6 class="item-subject font-weight-normal">Logout</h6>
+            </div>
+          </mat-list-item>
+        </mat-list>
+      </mat-menu>
+    </li>
+  </ul>
+</div>

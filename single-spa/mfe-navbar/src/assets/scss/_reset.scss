@@ -1,0 +1,22 @@
+/* Reset Styles */
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  background: $content-bg;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mat-icon {
+  height: auto;
+  width: auto;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}

@@ -1,0 +1,64 @@
+/* === Material Icons === */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import '~@mdi/font/scss/materialdesignicons';
+
+@import './assets/scss/custom-component-themes';
+@import './assets/scss/variable';
+@import './assets/scss/theme-custom';
+
+/* === Layout grid Styles === */
+@import '~@material/layout-grid/dist/mdc.layout-grid.css';
+
+/* === Mixins === */
+@import './assets/scss/mixins/compass-mixins/support';
+@import './assets/scss/mixins/compass-mixins/shared';
+@import './assets/scss/mixins/compass-mixins/flexbox';
+@import './assets/scss/mixins/compass-mixins/border-radius';
+@import './assets/scss/mixins/compass-mixins/transition';
+
+// /* === Template mixins === */
+@import './assets/scss/mixins/button';
+@import './assets/scss/mixins/color';
+@import './assets/scss/mixins/forms';
+@import './assets/scss/mixins/progress';
+@import './assets/scss/mixins/tabs';
+
+/* === Core Styles === */
+@import './assets/scss/fonts';
+@import './assets/scss/functions';
+@import './assets/scss/misc';
+@import './assets/scss/reset';
+@import './assets/scss/theme';
+@import './assets/scss/typography';
+@import './assets/scss/utilities';
+@import './assets/scss/demo';
+@import './assets/scss/spinner';
+@import './assets/scss/error';
+
+/* === Components === */
+@import './assets/scss/components/badges';
+@import './assets/scss/components/button';
+@import './assets/scss/components/cards';
+@import './assets/scss/components/dropdowns';
+@import './assets/scss/components/expansionpanel';
+@import './assets/scss/components/forms';
+@import './assets/scss/components/loaders/loaders';
+@import './assets/scss/components/progress';
+@import './assets/scss/components/slider';
+@import './assets/scss/components/todo-list';
+@import './assets/scss/components/tables';
+@import './assets/scss/components/tabs';
+@import './assets/scss/components/notifications';
+
+/* === Styles Plugin === */
+@import './assets/scss/styles';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

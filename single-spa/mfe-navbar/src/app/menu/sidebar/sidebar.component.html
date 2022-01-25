@@ -1,0 +1,52 @@
+<div class="mat-drawer-inner-container-content">
+  <div class="mat-drawer-header">
+    <div class="brand-wrapper">
+      <a href="index.html" class="brand-logo">
+        <div class="logo">
+          <img [src]="urlLogoMenu" />
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="mat-drawer-content">
+    <div class="user-info">
+      <p class="name">{{ usuario?.firstName }}</p>
+      <p class="email">{{ usuario?.email }}</p>
+    </div>
+    <mat-nav-list>
+      <!--Cartão de Crédito -->
+      <mat-accordion>
+        <mat-expansion-panel [class.mat-elevation-z0]="true">
+          <mat-expansion-panel-header collapsedHeight="40px" expandedHeight="40px">
+            <mat-icon>credit_card</mat-icon>Aplicações
+          </mat-expansion-panel-header>
+          <mat-nav-list class="submenu">
+            <a
+              mat-list-item
+              routerLink="/app-1"
+              routerLinkActive="active"
+              #contas="routerLinkActive"
+              [ngClass]="{ active: contas.isActive }"
+            >
+              <mat-icon>account_box</mat-icon>Aplicação 1
+            </a>
+          </mat-nav-list>
+
+          <mat-nav-list class="submenu">
+            <a
+              mat-list-item
+              routerLink="/app-2"
+              routerLinkActive="active"
+              #pagamentos="routerLinkActive"
+              [ngClass]="{ active: pagamentos.isActive }"
+            >
+              <mat-icon>dashboard</mat-icon>Aplicação 2
+            </a>
+          </mat-nav-list>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <a mat-list-item (click)="logout()"> <mat-icon>exit_to_app</mat-icon>Sair </a>
+    </mat-nav-list>
+  </div>
+</div>
